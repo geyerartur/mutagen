@@ -1,0 +1,3 @@
+/home/artur/repos/mutagen/build/CMakeFiles/mutagen.dir
+/home/artur/repos/mutagen/build/CMakeFiles/edit_cache.dir
+/home/artur/repos/mutagen/build/CMakeFiles/rebuild_cache.dir

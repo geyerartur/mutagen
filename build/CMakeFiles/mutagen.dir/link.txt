@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/mutagen.dir/link.d CMakeFiles/mutagen.dir/main.cpp.o -o mutagen
