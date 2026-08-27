@@ -1,0 +1,5 @@
+ACTION SPACE:
+MOVE (vec2 position)
+AIM (vec2 direction)
+SHOOT (bool)
+RELOAD (boo
