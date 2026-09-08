@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/artur/repos/mutagen/game/render.cpp" "CMakeFiles/mutagen.dir/game/render.cpp.o" "gcc" "CMakeFiles/mutagen.dir/game/render.cpp.o.d"
   "/home/artur/repos/mutagen/main.cpp" "CMakeFiles/mutagen.dir/main.cpp.o" "gcc" "CMakeFiles/mutagen.dir/main.cpp.o.d"
   "" "mutagen" "gcc" "CMakeFiles/mutagen.dir/link.d"
   )

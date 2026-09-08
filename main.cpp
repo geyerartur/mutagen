@@ -2,52 +2,82 @@
 #include <string>
 #include <vector>
 #include <random>
+#include <ncursesw/ncurses.h>
+#include <chrono>
+#include <thread>
 
 #include "./game/ansi.hpp"
+#include "./game/render.hpp"
+#include "./game/player.hpp"
 
-constexpr int ROWS = 32;
-constexpr int COLS = 128;
+//const int ROWS = 32;
+//const int COLS = 128;
+
+char key;
 
 int main() {
     std::vector<std::vector<bool>> grid(
-        ROWS,
-        std::vector<bool>(COLS, false)
+        32,
+        std::vector<bool>(32, false)
     );
 
     std::random_device rd;
     std::mt19937 gen(rd());
 
-    std::uniform_int_distribution<> distX(0, ROWS - 1);
-    std::uniform_int_distribution<> distY(0, COLS - 1);
+    std::uniform_int_distribution<> distX(0, 32 - 1);
+    std::uniform_int_distribution<> distY(0, 32 - 1);
 
-    std::vector<int> player1_pos = {distX(gen), distY(gen)};
-    std::vector<int> player2_pos = {distX(gen), distY(gen)};
+    
+    const Screen screen{
+      .cols = 32,
+      .rows = 32
+    };
+    
+    setlocale(LC_ALL, "");
 
+    initscr();
+    cbreak();
+    noecho();
+    curs_set(0);
 
-
-    std::cout << "Player 1 position: " << player1_pos[0] << ", " << player1_pos[1] << std::endl;
-    std::cout << "Player 2 position: " << player2_pos[0] << ", " << player2_pos[1] << std::endl;
-
-
-
-
-
-    std::cout << ansi::bg::BLACK;
-
-    for (int row = 0; row < ROWS; ++row) {
-        for (int col = 0; col < COLS; ++col) {
-            if (row == player1_pos[0] && col == player1_pos[1]) {
-                std::cout << ansi::fg::RED << ansi::BLOCK;
-            } else if (row == player2_pos[0] && col == player2_pos[1]) {
-                std::cout << ansi::fg::BLUE << ansi::BLOCK;
-            } else {
-                std::cout << ' ';
-            }
-        }
-
-        std::cout << '\n';
+    nodelay(stdscr, TRUE); // Non-blocking input
+    
+    if (has_colors()) {
+      start_color();
+      init_pair(1, COLOR_RED, COLOR_BLACK);
+      init_pair(2, COLOR_BLUE, COLOR_BLACK);
     }
 
-    std::cout << ansi::RESET << std::flush;
+    while (true) {
+        Position player1_pos{
+      .x = distX(gen),
+      .y = distY(gen)
+    };
+
+    Position player2_pos{
+      .x = distX(gen),
+      .y = distY(gen)
+    };
+
+
+        // Clear the console
+        
+        clear();
+
+        // Draw the grid with players
+        drawScreen(screen, player1_pos, player2_pos);
+
+        refresh();
+
+        // Handle player input
+        int input = getch();
+        if (input == 'q') {
+            endwin();
+            std::cout << ansi::RESET << std::flush;
+            break; // Exit the game loop
+        };
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(300)); // Control the game speed
+    }
 }
 

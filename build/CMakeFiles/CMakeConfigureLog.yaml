@@ -564,3 +564,103 @@ events:
       Running the CXX compiler's linker: "/usr/bin/ld" "-v"
       GNU ld (GNU Binutils for Debian) 2.44
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CheckLibraryExists.cmake:78 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/FindCurses.cmake:107 (CHECK_LIBRARY_EXISTS)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for wsyncup in /usr/lib/x86_64-linux-gnu/libcurses.so"
+    directories:
+      source: "/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-MMt3KZ"
+      binary: "/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-MMt3KZ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CURSES_CURSES_HAS_WSYNCUP"
+      cached: true
+      stdout: |
+        Change Dir: '/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-MMt3KZ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_595c1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_595c1.dir/build.make CMakeFiles/cmTC_595c1.dir/build
+        gmake[1]: Entering directory '/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-MMt3KZ'
+        Building C object CMakeFiles/cmTC_595c1.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=wsyncup -o CMakeFiles/cmTC_595c1.dir/CheckFunctionExists.c.o -c /home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-MMt3KZ/CheckFunctionExists.c
+        Linking C executable cmTC_595c1
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_595c1.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=wsyncup CMakeFiles/cmTC_595c1.dir/CheckFunctionExists.c.o -o cmTC_595c1  -lcurses
+        gmake[1]: Leaving directory '/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-MMt3KZ'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CheckLibraryExists.cmake:78 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/FindCurses.cmake:161 (CHECK_LIBRARY_EXISTS)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for cbreak in /usr/lib/x86_64-linux-gnu/libncurses.so"
+    directories:
+      source: "/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-3XOS2o"
+      binary: "/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-3XOS2o"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CURSES_NCURSES_HAS_CBREAK"
+      cached: true
+      stdout: |
+        Change Dir: '/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-3XOS2o'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f58f3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f58f3.dir/build.make CMakeFiles/cmTC_f58f3.dir/build
+        gmake[1]: Entering directory '/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-3XOS2o'
+        Building C object CMakeFiles/cmTC_f58f3.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cbreak -o CMakeFiles/cmTC_f58f3.dir/CheckFunctionExists.c.o -c /home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-3XOS2o/CheckFunctionExists.c
+        Linking C executable cmTC_f58f3
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f58f3.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cbreak CMakeFiles/cmTC_f58f3.dir/CheckFunctionExists.c.o -o cmTC_f58f3  -lncurses
+        gmake[1]: Leaving directory '/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-3XOS2o'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CheckLibraryExists.cmake:78 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/FindCurses.cmake:163 (CHECK_LIBRARY_EXISTS)"
+      - "CMakeLists.txt:7 (find_package)"
+    checks:
+      - "Looking for nodelay in /usr/lib/x86_64-linux-gnu/libncurses.so"
+    directories:
+      source: "/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-FcK7aU"
+      binary: "/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-FcK7aU"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CURSES_NCURSES_HAS_NODELAY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-FcK7aU'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ca89a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ca89a.dir/build.make CMakeFiles/cmTC_ca89a.dir/build
+        gmake[1]: Entering directory '/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-FcK7aU'
+        Building C object CMakeFiles/cmTC_ca89a.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=nodelay -o CMakeFiles/cmTC_ca89a.dir/CheckFunctionExists.c.o -c /home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-FcK7aU/CheckFunctionExists.c
+        Linking C executable cmTC_ca89a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca89a.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=nodelay CMakeFiles/cmTC_ca89a.dir/CheckFunctionExists.c.o -o cmTC_ca89a  -lncurses
+        gmake[1]: Leaving directory '/home/artur/repos/mutagen/build/CMakeFiles/CMakeScratch/TryCompile-FcK7aU'
+        
+      exitCode: 0
+...

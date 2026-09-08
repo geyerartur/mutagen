@@ -136,6 +136,30 @@ mutagen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/build
 .PHONY : mutagen/fast
 
+game/render.o: game/render.cpp.o
+.PHONY : game/render.o
+
+# target to build an object file
+game/render.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/game/render.cpp.o
+.PHONY : game/render.cpp.o
+
+game/render.i: game/render.cpp.i
+.PHONY : game/render.i
+
+# target to preprocess a source file
+game/render.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/game/render.cpp.i
+.PHONY : game/render.cpp.i
+
+game/render.s: game/render.cpp.s
+.PHONY : game/render.s
+
+# target to generate assembly for a file
+game/render.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/game/render.cpp.s
+.PHONY : game/render.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -170,6 +194,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mutagen"
+	@echo "... game/render.o"
+	@echo "... game/render.i"
+	@echo "... game/render.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

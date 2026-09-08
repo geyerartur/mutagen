@@ -6,6 +6,7 @@
 namespace ansi {
     inline constexpr std::string_view RESET = "\033[0m";
     inline constexpr std::string_view BLOCK = "\xE2\x96\x88"; // █
+    inline constexpr std::string_view BULLET = "asd";
 
     namespace fg {
         inline constexpr std::string_view BLACK   = "\033[30m";
