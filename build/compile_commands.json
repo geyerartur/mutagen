@@ -4,11 +4,5 @@
   "command": "/usr/bin/c++    -o CMakeFiles/mutagen.dir/main.cpp.o -c /home/artur/repos/mutagen/main.cpp",
   "file": "/home/artur/repos/mutagen/main.cpp",
   "output": "CMakeFiles/mutagen.dir/main.cpp.o"
-},
-{
-  "directory": "/home/artur/repos/mutagen/build",
-  "command": "/usr/bin/c++    -o CMakeFiles/mutagen.dir/game/render.cpp.o -c /home/artur/repos/mutagen/game/render.cpp",
-  "file": "/home/artur/repos/mutagen/game/render.cpp",
-  "output": "CMakeFiles/mutagen.dir/game/render.cpp.o"
 }
 ]

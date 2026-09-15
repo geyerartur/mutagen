@@ -85,12 +85,12 @@ clean: CMakeFiles/mutagen.dir/clean
 CMakeFiles/mutagen.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/artur/repos/mutagen/build/CMakeFiles --progress-num=1,2,3 "Built target mutagen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/artur/repos/mutagen/build/CMakeFiles --progress-num=1,2 "Built target mutagen"
 .PHONY : CMakeFiles/mutagen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mutagen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/artur/repos/mutagen/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/artur/repos/mutagen/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mutagen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/artur/repos/mutagen/build/CMakeFiles 0
 .PHONY : CMakeFiles/mutagen.dir/rule
@@ -102,7 +102,7 @@ mutagen: CMakeFiles/mutagen.dir/rule
 # codegen rule for target.
 CMakeFiles/mutagen.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/artur/repos/mutagen/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target mutagen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/artur/repos/mutagen/build/CMakeFiles --progress-num=1,2 "Finished codegen for target mutagen"
 .PHONY : CMakeFiles/mutagen.dir/codegen
 
 # clean rule for target.

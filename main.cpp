@@ -1,83 +1,116 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <random>
-#include <ncursesw/ncurses.h>
-#include <chrono>
-#include <thread>
+#include <locale.h>
+#include <ncurses.h>
+#include <panel.h>
 
-#include "./game/ansi.hpp"
-#include "./game/render.hpp"
-#include "./game/player.hpp"
-
-//const int ROWS = 32;
-//const int COLS = 128;
-
-char key;
-
-int main() {
-    std::vector<std::vector<bool>> grid(
-        32,
-        std::vector<bool>(32, false)
-    );
-
-    std::random_device rd;
-    std::mt19937 gen(rd());
-
-    std::uniform_int_distribution<> distX(0, 32 - 1);
-    std::uniform_int_distribution<> distY(0, 32 - 1);
-
-    
-    const Screen screen{
-      .cols = 32,
-      .rows = 32
-    };
-    
+int main(void)
+{
     setlocale(LC_ALL, "");
 
     initscr();
     cbreak();
     noecho();
+    keypad(stdscr, TRUE);
     curs_set(0);
+    timeout(100);
 
-    nodelay(stdscr, TRUE); // Non-blocking input
-    
     if (has_colors()) {
-      start_color();
-      init_pair(1, COLOR_RED, COLOR_BLACK);
-      init_pair(2, COLOR_BLUE, COLOR_BLACK);
+        start_color();
+        use_default_colors();
+
+        init_pair(1, COLOR_RED, -1);
+        init_pair(2, COLOR_BLUE, -1);
+        init_pair(3, COLOR_WHITE, -1);
     }
 
-    while (true) {
-        Position player1_pos{
-      .x = distX(gen),
-      .y = distY(gen)
-    };
+    WINDOW *overlay_win = newwin(5, 28, 0, 0);
 
-    Position player2_pos{
-      .x = distX(gen),
-      .y = distY(gen)
-    };
-
-
-        // Clear the console
-        
-        clear();
-
-        // Draw the grid with players
-        drawScreen(screen, player1_pos, player2_pos);
-
-        refresh();
-
-        // Handle player input
-        int input = getch();
-        if (input == 'q') {
-            endwin();
-            std::cout << ansi::RESET << std::flush;
-            break; // Exit the game loop
-        };
-
-        std::this_thread::sleep_for(std::chrono::milliseconds(300)); // Control the game speed
+    if (overlay_win == NULL) {
+        endwin();
+        return 1;
     }
+
+    PANEL *overlay_panel = new_panel(overlay_win);
+
+    if (overlay_panel == NULL) {
+        delwin(overlay_win);
+        endwin();
+        return 1;
+    }
+
+    while (1) {
+        int rows, cols;
+        getmaxyx(stdscr, rows, cols);
+
+        werase(stdscr);
+
+        /*
+         * Draw the underlying screen.
+         */
+        if (rows > 0 && cols > 4) {
+            int center_row = rows / 2;
+            int center_col = cols / 2;
+
+            if (has_colors())
+                attron(COLOR_PAIR(1));
+
+            mvaddstr(center_row, center_col - 2, "█");
+
+            if (has_colors()) {
+                attroff(COLOR_PAIR(1));
+                attron(COLOR_PAIR(2));
+            }
+
+            mvaddstr(center_row, center_col + 1, "█");
+
+            if (has_colors())
+                attroff(COLOR_PAIR(2));
+        }
+
+        /*
+         * Draw the overlay window.
+         */
+        werase(overlay_win);
+
+        if (has_colors())
+            wattron(overlay_win, COLOR_PAIR(3));
+
+        box(overlay_win, 0, 0);
+
+        mvwprintw(overlay_win, 1, 2, "Terminal overlay");
+        mvwprintw(overlay_win, 2, 2, "Rows: %d", rows);
+        mvwprintw(overlay_win, 3, 2, "Cols: %d", cols);
+
+        if (has_colors())
+            wattroff(overlay_win, COLOR_PAIR(3));
+
+        /*
+         * Tell panels to update their stacking.
+         */
+        update_panels();
+
+        /*
+         * doupdate() actually renders everything.
+         */
+        doupdate();
+
+        int ch = getch();
+
+        if (ch == 'q' || ch == 'Q')
+            break;
+
+        if (ch == KEY_RESIZE) {
+            /*
+             * If desired, reposition/resize the panel here.
+             */
+            wclear(overlay_win);
+        }
+    }
+
+    del_panel(overlay_panel);
+    delwin(overlay_win);
+
+    endwin();
+
+    return 0;
 }
 

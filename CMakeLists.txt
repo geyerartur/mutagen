@@ -12,9 +12,8 @@ find_package(Curses REQUIRED)
 
 add_executable(${PROJECT_NAME} 
   main.cpp
-  game/render.cpp
 )
 
 
 target_include_directories(mutagen PRIVATE ${CURSES_INCLUDE_DIRS})
-target_link_libraries(mutagen PRIVATE ${CURSES_LIBRARIES})
+target_link_libraries(mutagen PRIVATE ${CURSES_LIBRARIES} panelw)
