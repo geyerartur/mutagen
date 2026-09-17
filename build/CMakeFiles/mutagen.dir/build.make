@@ -86,20 +86,68 @@ CMakeFiles/mutagen.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mutagen.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/artur/repos/mutagen/main.cpp -o CMakeFiles/mutagen.dir/main.cpp.s
 
+CMakeFiles/mutagen.dir/game/game.cpp.o: CMakeFiles/mutagen.dir/flags.make
+CMakeFiles/mutagen.dir/game/game.cpp.o: /home/artur/repos/mutagen/game/game.cpp
+CMakeFiles/mutagen.dir/game/game.cpp.o: CMakeFiles/mutagen.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/artur/repos/mutagen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mutagen.dir/game/game.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mutagen.dir/game/game.cpp.o -MF CMakeFiles/mutagen.dir/game/game.cpp.o.d -o CMakeFiles/mutagen.dir/game/game.cpp.o -c /home/artur/repos/mutagen/game/game.cpp
+
+CMakeFiles/mutagen.dir/game/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mutagen.dir/game/game.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/artur/repos/mutagen/game/game.cpp > CMakeFiles/mutagen.dir/game/game.cpp.i
+
+CMakeFiles/mutagen.dir/game/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mutagen.dir/game/game.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/artur/repos/mutagen/game/game.cpp -o CMakeFiles/mutagen.dir/game/game.cpp.s
+
+CMakeFiles/mutagen.dir/input/input.cpp.o: CMakeFiles/mutagen.dir/flags.make
+CMakeFiles/mutagen.dir/input/input.cpp.o: /home/artur/repos/mutagen/input/input.cpp
+CMakeFiles/mutagen.dir/input/input.cpp.o: CMakeFiles/mutagen.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/artur/repos/mutagen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mutagen.dir/input/input.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mutagen.dir/input/input.cpp.o -MF CMakeFiles/mutagen.dir/input/input.cpp.o.d -o CMakeFiles/mutagen.dir/input/input.cpp.o -c /home/artur/repos/mutagen/input/input.cpp
+
+CMakeFiles/mutagen.dir/input/input.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mutagen.dir/input/input.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/artur/repos/mutagen/input/input.cpp > CMakeFiles/mutagen.dir/input/input.cpp.i
+
+CMakeFiles/mutagen.dir/input/input.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mutagen.dir/input/input.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/artur/repos/mutagen/input/input.cpp -o CMakeFiles/mutagen.dir/input/input.cpp.s
+
+CMakeFiles/mutagen.dir/renderer/renderer.cpp.o: CMakeFiles/mutagen.dir/flags.make
+CMakeFiles/mutagen.dir/renderer/renderer.cpp.o: /home/artur/repos/mutagen/renderer/renderer.cpp
+CMakeFiles/mutagen.dir/renderer/renderer.cpp.o: CMakeFiles/mutagen.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/artur/repos/mutagen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mutagen.dir/renderer/renderer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mutagen.dir/renderer/renderer.cpp.o -MF CMakeFiles/mutagen.dir/renderer/renderer.cpp.o.d -o CMakeFiles/mutagen.dir/renderer/renderer.cpp.o -c /home/artur/repos/mutagen/renderer/renderer.cpp
+
+CMakeFiles/mutagen.dir/renderer/renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mutagen.dir/renderer/renderer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/artur/repos/mutagen/renderer/renderer.cpp > CMakeFiles/mutagen.dir/renderer/renderer.cpp.i
+
+CMakeFiles/mutagen.dir/renderer/renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mutagen.dir/renderer/renderer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/artur/repos/mutagen/renderer/renderer.cpp -o CMakeFiles/mutagen.dir/renderer/renderer.cpp.s
+
 # Object files for target mutagen
 mutagen_OBJECTS = \
-"CMakeFiles/mutagen.dir/main.cpp.o"
+"CMakeFiles/mutagen.dir/main.cpp.o" \
+"CMakeFiles/mutagen.dir/game/game.cpp.o" \
+"CMakeFiles/mutagen.dir/input/input.cpp.o" \
+"CMakeFiles/mutagen.dir/renderer/renderer.cpp.o"
 
 # External object files for target mutagen
 mutagen_EXTERNAL_OBJECTS =
 
 mutagen: CMakeFiles/mutagen.dir/main.cpp.o
+mutagen: CMakeFiles/mutagen.dir/game/game.cpp.o
+mutagen: CMakeFiles/mutagen.dir/input/input.cpp.o
+mutagen: CMakeFiles/mutagen.dir/renderer/renderer.cpp.o
 mutagen: CMakeFiles/mutagen.dir/build.make
 mutagen: CMakeFiles/mutagen.dir/compiler_depend.ts
 mutagen: /usr/lib/x86_64-linux-gnu/libncursesw.so
 mutagen: /usr/lib/x86_64-linux-gnu/libformw.so
 mutagen: CMakeFiles/mutagen.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/artur/repos/mutagen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mutagen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/artur/repos/mutagen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable mutagen"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mutagen.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

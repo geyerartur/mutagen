@@ -1,1 +1,1 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/mutagen.dir/link.d CMakeFiles/mutagen.dir/main.cpp.o -o mutagen  -lncursesw /usr/lib/x86_64-linux-gnu/libformw.so -lpanelw
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/mutagen.dir/link.d CMakeFiles/mutagen.dir/main.cpp.o CMakeFiles/mutagen.dir/game/game.cpp.o CMakeFiles/mutagen.dir/input/input.cpp.o CMakeFiles/mutagen.dir/renderer/renderer.cpp.o -o mutagen  -lncursesw /usr/lib/x86_64-linux-gnu/libformw.so -lpanelw

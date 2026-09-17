@@ -12,6 +12,9 @@ find_package(Curses REQUIRED)
 
 add_executable(${PROJECT_NAME} 
   main.cpp
+  game/game.cpp
+  input/input.cpp
+  renderer/renderer.cpp
 )
 
 

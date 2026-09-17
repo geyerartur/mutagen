@@ -4,5 +4,23 @@
   "command": "/usr/bin/c++    -o CMakeFiles/mutagen.dir/main.cpp.o -c /home/artur/repos/mutagen/main.cpp",
   "file": "/home/artur/repos/mutagen/main.cpp",
   "output": "CMakeFiles/mutagen.dir/main.cpp.o"
+},
+{
+  "directory": "/home/artur/repos/mutagen/build",
+  "command": "/usr/bin/c++    -o CMakeFiles/mutagen.dir/game/game.cpp.o -c /home/artur/repos/mutagen/game/game.cpp",
+  "file": "/home/artur/repos/mutagen/game/game.cpp",
+  "output": "CMakeFiles/mutagen.dir/game/game.cpp.o"
+},
+{
+  "directory": "/home/artur/repos/mutagen/build",
+  "command": "/usr/bin/c++    -o CMakeFiles/mutagen.dir/input/input.cpp.o -c /home/artur/repos/mutagen/input/input.cpp",
+  "file": "/home/artur/repos/mutagen/input/input.cpp",
+  "output": "CMakeFiles/mutagen.dir/input/input.cpp.o"
+},
+{
+  "directory": "/home/artur/repos/mutagen/build",
+  "command": "/usr/bin/c++    -o CMakeFiles/mutagen.dir/renderer/renderer.cpp.o -c /home/artur/repos/mutagen/renderer/renderer.cpp",
+  "file": "/home/artur/repos/mutagen/renderer/renderer.cpp",
+  "output": "CMakeFiles/mutagen.dir/renderer/renderer.cpp.o"
 }
 ]

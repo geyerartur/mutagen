@@ -136,6 +136,54 @@ mutagen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/build
 .PHONY : mutagen/fast
 
+game/game.o: game/game.cpp.o
+.PHONY : game/game.o
+
+# target to build an object file
+game/game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/game/game.cpp.o
+.PHONY : game/game.cpp.o
+
+game/game.i: game/game.cpp.i
+.PHONY : game/game.i
+
+# target to preprocess a source file
+game/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/game/game.cpp.i
+.PHONY : game/game.cpp.i
+
+game/game.s: game/game.cpp.s
+.PHONY : game/game.s
+
+# target to generate assembly for a file
+game/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/game/game.cpp.s
+.PHONY : game/game.cpp.s
+
+input/input.o: input/input.cpp.o
+.PHONY : input/input.o
+
+# target to build an object file
+input/input.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/input/input.cpp.o
+.PHONY : input/input.cpp.o
+
+input/input.i: input/input.cpp.i
+.PHONY : input/input.i
+
+# target to preprocess a source file
+input/input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/input/input.cpp.i
+.PHONY : input/input.cpp.i
+
+input/input.s: input/input.cpp.s
+.PHONY : input/input.s
+
+# target to generate assembly for a file
+input/input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/input/input.cpp.s
+.PHONY : input/input.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -160,6 +208,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+renderer/renderer.o: renderer/renderer.cpp.o
+.PHONY : renderer/renderer.o
+
+# target to build an object file
+renderer/renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/renderer/renderer.cpp.o
+.PHONY : renderer/renderer.cpp.o
+
+renderer/renderer.i: renderer/renderer.cpp.i
+.PHONY : renderer/renderer.i
+
+# target to preprocess a source file
+renderer/renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/renderer/renderer.cpp.i
+.PHONY : renderer/renderer.cpp.i
+
+renderer/renderer.s: renderer/renderer.cpp.s
+.PHONY : renderer/renderer.s
+
+# target to generate assembly for a file
+renderer/renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mutagen.dir/build.make CMakeFiles/mutagen.dir/renderer/renderer.cpp.s
+.PHONY : renderer/renderer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -170,9 +242,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mutagen"
+	@echo "... game/game.o"
+	@echo "... game/game.i"
+	@echo "... game/game.s"
+	@echo "... input/input.o"
+	@echo "... input/input.i"
+	@echo "... input/input.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... renderer/renderer.o"
+	@echo "... renderer/renderer.i"
+	@echo "... renderer/renderer.s"
 .PHONY : help
 
 
